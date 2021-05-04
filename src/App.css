@@ -1,0 +1,409 @@
+body {
+    margin: 0;
+    font-family: "Barlow",
+    sans-serif;
+    font-weight:400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width:100%;
+    min-height:100%;
+    color:white;
+}
+
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+font-family: "Barlow";
+}
+
+div {
+font-family: "Barlow";
+}
+
+a {
+color:black;
+text-decoration:none;
+}
+
+span {
+font-family: "Barlow";
+}
+
+h1{
+font-size:4.5em;
+    margin:5px;
+    font-family: "Barlow";
+}
+
+h2 {
+font-family: "Barlow";
+margin:5px;
+}
+
+h3 {
+font-family: "Barlow";
+}
+
+h4{
+    font-size:2em;
+    margin:5px;
+    font-family: "Barlow";
+}
+
+h5 {
+    font-size: 1.3em;
+    margin:0px;
+    font-family: "Barlow";
+    font-weight:400;
+}
+
+.MuiDialog-paper {
+    padding:30px;
+}
+
+
+.switch-wrapper {
+position: relative;
+}
+
+.switch-wrapper > div {
+position: absolute;
+}
+
+.App {
+  text-align: center;
+}
+
+.center {
+    text-align: center;
+    margin:0 auto;
+}
+
+.main-background {
+    box-shadow: none;
+    width:100%;
+    min-height:950px;
+    height:max(100%);
+}
+
+.databubble {
+    border-radius:10px;
+    border:1px solid white;
+    margin:20px;
+}
+
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  border-bottom:1px solid dimgray;
+  background-color:#222;
+}
+
+.mia-app-container {
+width:400px;
+margin:25px auto;
+padding:25px;
+min-height:600px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.divTable{
+    display: table;
+    width: 100%;
+}
+.divTableRow {
+    display: table-row;
+}
+
+.hide {
+    display: none;
+}
+
+.divTableCell, .divTableHead {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 10px;
+    vertical-align:middle;
+}
+
+.divTableEnd {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 10px;
+
+    vertical-align:middle;
+}
+.divNumber {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 3px;
+    min-width:15px;
+    max-width:15px;
+    vertical-align:middle;
+}
+
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+.divTableBody {
+    display: table-row-group;
+}
+
+.matchbook-icon {
+position: relative;
+display: block;
+text-align: center;
+border-radius: 50%;
+color: #666;
+}
+
+.matchbook-icon-success {
+position: relative;
+display: block;
+text-align: center;
+border-radius: 50%;
+color:green;
+}
+
+.successrow {
+    background-color: lightgreen;
+}
+
+.main-buttons {
+    background:linear-gradient(180deg, #0071bc, #0033cb) ;
+    display:inline-flex!important;
+    margin:20px!important;
+    padding:30px!important;
+    color:white!important;
+    box-shadow:inset 0px 0px 5 px #0071bc!important;
+    border-radius:10px!important;
+    width:140px;
+    height:125px;
+    text-align:center;
+}
+
+.small-main-buttons {
+    background:linear-gradient(180deg, #0071bc, #0033cb) ;
+    display:inline-flex!important;
+    margin:10px!important;
+    padding:20px!important;
+    color:white!important;
+    box-shadow:inset 0px 0px 5 px #0071bc!important;
+    border-radius:10px!important;
+    width:50px;
+    height:55px;
+    text-align:center;
+}
+
+.button-container {
+    display:flex;
+    margin:10px;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.boxshadow {
+    box-shadow:2px 2px 2px 2px #222;
+}
+
+.appbar {
+    border-radius:8px;
+    background-color:#0071bc!important;
+    max-height:60px;
+    padding:0px;
+    width:400px;
+}
+
+.imagebox {
+    margin:10px;
+    width:100px;
+    border-radius:10px;
+    border:1px solid white;
+    color:white!important;
+    box-shadow:inset 0px 0px 5 px #0071bc!important;
+    border-radius:10px!important;
+    height:130px;
+    text-align:center;
+    flex-direction: column;
+    font-size:12px;
+    display: inline-block
+}
+
+.whitetext {
+    color:white;
+    font-family: "Barlow";
+}
+
+.productdiv {
+    background-color:#457B9D;
+    border-radius:10px;
+    color:white;
+    padding:20px;
+    width:290px;
+    margin:0 auto;
+    font-family: "Barlow";
+    height:380px;
+    position:relative;
+}
+
+.productdiv:hover {
+    box-shadow: 0px 0px 10px grey;
+}
+
+.productimage {
+    width:100%;
+    object-fit: contain;
+    margin:0;
+    border-radius:5px;
+    font-family: "Barlow";
+    object-fit: cover;
+    max-height:150px;
+}
+
+.productdescription {
+    background-color:white;
+    color:#45789d;
+    width:100%;
+    border-radius:5px;
+    margin:0;
+    text-align:left;
+    font-family: "Barlow";
+    padding:3px;
+    overflow-y:auto;
+}
+
+
+
+.productheader {
+    margin: 0;
+    text-align: left;
+    font-family: "Barlow";
+}
+
+.productfees {
+    margin: 5px 0 0 0;
+    text-align: left;
+    font-family: "Barlow";
+    display:table;
+    width:100%;
+    position:absolute;
+    bottom:10px;
+}
+
+.companydescriptionblock {
+    display: table;
+    margin-left:5px;
+    background-color:white;
+}
+
+.companydescription {
+    background-color:#1D3557;
+    color:white;
+    padding:10px;
+    display:table-cell;
+    width:50%;
+    font-size:1.3em;
+}
+
+.companydescriptionimg {
+    display:table-cell;
+}
+
+.buybutton {
+    background-color: #1D3557;
+    border:1px solid white;
+    border-radius:8px;
+    padding:10px 25px;
+    width:80px;
+    display:table-cell;
+    vertical-align:middle;
+    color:white;
+    cursor: pointer;
+    position:absolute;
+    right:30px;
+}
+
+.buybutton:hover {
+    background-color: #e0e0e0;
+    color:#1D3557;
+}
+
+.productprice {
+    font-weight:bold;
+    display:table-cell;
+    vertical-align:middle;
+    padding-right:20px;
+}
+
+.subheader {
+    font-size:2em;
+    margin-left:5px;
+    margin-top:0px;
+    color:#707070;
+}
+
+.gradientdialog{
+    background-image: linear-gradient(5deg, #0071bc, #120524);
+}
+
+.pulse {
+    box-shadow: 0 0 0 rgba(249, 56, 93, 0.4);
+    animation: pulse 2s infinite;
+}
+
+.pulse:hover {
+    animation: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(249, 56, 93, 0.4);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(249, 56, 93, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(249, 56, 93, 0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(249, 56, 93, 0.4);
+        box-shadow: 0 0 0 0 rgba(249, 56, 93, 0.4);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(249, 56, 93, 0);
+        box-shadow: 0 0 0 10px rgba(249, 56, 93, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(249, 56, 93, 0);
+        box-shadow: 0 0 0 0 rgba(249, 56, 93, 0);
+    }
+}
