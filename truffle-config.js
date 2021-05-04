@@ -1,5 +1,5 @@
 require('dotenv').config()
-const HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 const infura = `${process.env.DOMAIN}`;
 const pkey = `${process.env.PRIVATEKEY}`;
 const skaleNetwork = `${process.env.SKALENETWORK}`
@@ -33,7 +33,7 @@ mocha: {
 
 compilers: {
     solc: {
-    version: "0.7.0",    // Fetch exact version from solc-bin (default: truffle's version)
+    version: "0.8.4",    // Fetch exact version from solc-bin (default: truffle's version)
     docker: false,        // Use "0.5.1" you've installed locally with docker (default: false)
     settings: {          // See the solidity docs for advice about optimization and evmVersion
         optimizer: {

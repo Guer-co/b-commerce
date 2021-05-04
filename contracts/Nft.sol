@@ -154,10 +154,10 @@ contract Nft {
         return true;
     }
 
-    function getUserAddresses(address _user) public view returns (address[] memory){
-        if (msg.sender == userInfo[_user].creator) {
+    function getUserAddresses() public view returns (address[] memory){
+        //if (msg.sender == userInfo[_user].creator) {
             return (myAddresses);
-        }
+        //}
     }
 
     function transferFunds(address payable _receiver, uint256 _amount) pure external {

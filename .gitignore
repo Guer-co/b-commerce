@@ -20,6 +20,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
-/src/build
 .package-lock.json
 products_export_1.csv
