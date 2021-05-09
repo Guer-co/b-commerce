@@ -113,16 +113,39 @@ const classes = useStyles();
 
 const web3Check = async () => {
     if (window.ethereum) {
-        window.ethereum.autoRefreshOnNetworkChange = false;
-        try {
-            await web3Modal.connect();
-            //const provider = await web3Modal.connect();
-            //await window.ethereum.enable()
-            setWeb3test(1);
-            setOpenconnectmodal(true);
+      window.ethereum.autoRefreshOnNetworkChange = false;
+      try {
+          web3Modal.connect();
+            await web3.eth.getAccounts((error, accounts) => {
+              if (error) {
+                console.error(error);
+              }
+              setMyaccount(accounts[0]);
+              let switchToSKALE = {
+                chainId: "0x8d0ca30434c02",
+                chainName: "SKALE Network Testnet",
+                rpcUrls: ["https://eth-global-12.skalenodes.com:10584"],
+                nativeCurrency: {
+                  name: "SKALE ETH",
+                  symbol: "skETH",
+                  decimals: 18
+                },
+                blockExplorerUrls: [
+                  "https://expedition.dev/?rpcUrl=https://eth-global-12.skalenodes.com:10584"
+                ]
+              };
+              window.ethereum
+              .request({
+                method: "wallet_addEthereumChain",
+                params: [switchToSKALE, accounts[0]]
+              })
+              .catch((error) => console.log(error.message));
+          })
+
+          ;
         } catch (error) {
-            alert("You need to allow access to your metamask to use the app.");
-        }
+          alert("You need to allow access to your metamask to use the app.");
+      }
     }
 }
 
@@ -528,7 +551,7 @@ return(
                     </div>
                     <p className="productdescription">{product2description ? product2description : "This is the first product I am offering, it costs $20"}</p>
                     <div className="productfees">
-                        <img alt="coinexchange" src={CoinExchange} style={{width:'30px',display:'table-cell'}} />
+                    <img alt="coinexchange" src={CoinExchange} style={{width:'30px',display:'table-cell'}} onClick={() => handleCurrency()}/>
                         <span className="productprice">{product2price ? !useethprice ? "USD $" + product2price : "ETH " + (product2price/ethprice).toFixed(6) : "FREE"}</span>
                         <button className="buybutton" 
                             onClick={() => {setModalproducttitle(product2title);setModalproductimage(product2image);setModalproductdescription(product2description);setModalproductprice(product2price);setOpenbuymodal(true)}}
@@ -546,7 +569,7 @@ return(
                     </div>
                     <p className="productdescription">{product3description ? product3description : "This is the first product I am offering, it costs $30"}</p>
                     <div className="productfees">
-                        <img alt="coinexchange" src={CoinExchange} style={{width:'30px',display:'table-cell'}} />
+                    <img alt="coinexchange" src={CoinExchange} style={{width:'30px',display:'table-cell'}} onClick={() => handleCurrency()}/>
                         <span className="productprice">{product3price ? !useethprice ? "USD $" + product3price : "ETH " + (product3price/ethprice).toFixed(6) : "FREE"}</span>
                         <button className="buybutton" 
                             onClick={() => {setModalproducttitle(product3title);setModalproductimage(product3image);setModalproductdescription(product3description);setModalproductprice(product3price);setOpenbuymodal(true)}}
@@ -824,6 +847,7 @@ type="file" id="files" / >
                 <br/><br/>These demo "storefronts" are stateless, meaning they have no memory, and are completely neutral when you arrive. The storefront data and images are hosted entirely on SKALE and IPFS, associated with a user's NFT.
                 <br/><br/> When you "Connect" to the site, you temporarily provide it access to information you control, not the other way around. 
                 <br/><br/>These examples are also decentralized, meaning they're hosted across the network rather than a central server, and all the information (images, text, prices, contact info) is stored on decentralized databases and storage networks!
+                <br/><br/>If you want to create your own store, please visit this link: <a href="https://dashboard.b-commerce.co">https://dashboard.b-commerce.co</a>
                 <br/><br/><span style={{color:'red'}}>THIS IS A DEMONSTRATION ON A TESTNET. Please do not send real Ethereum, or provide any sensitive or private information, as they will most certainly be lost! </span>
                 </div>
             <DialogActions>
