@@ -576,6 +576,7 @@ return(
                     <img alt="logo" src={logo ? "https://cloudflare-ipfs.com/ipfs/" + logo : "https://cloudflare-ipfs.com/ipfs/QmWBUPgkgpGMaSi9fn85KssDaGikcxPggrg8dkNXqce2rf"} />
                 </Grid>
             </Grid>
+            {/*
             <Grid item xs={6} className="center">
                 <div className="file-field input-field">
                     <input
@@ -605,8 +606,9 @@ return(
                 </div>
                 <input onChange={(e) => upload(e)} 
 type="file" id="files" / >
-
             </Grid>
+                        */}
+
         </div>        
 
         <Dialog
@@ -696,7 +698,7 @@ type="file" id="files" / >
                     </Select>
                     </FormControl>
                     <br/><br/>
-                    <TextField disabled style={{paddingBottom:'10px',width:'400px',color:'white'}} id="outlined-basic" label="Paste a Store's Ethereum address (disabled)" value={typedstoreaddress} onChange={(e) => {setTypedstoreaddress(e.target.value)}}/>
+                    <TextField disabled style={{paddingBottom:'10px',width:'400px',color:'white'}} id="outlined-basic" label="Paste a Store's Ethereum or ENS Address (disabled)" value={typedstoreaddress} onChange={(e) => {setTypedstoreaddress(e.target.value)}}/>
                 </Grid>
                 <Grid item sm={3} style={{verticalAlign:'middle',alignItems: 'center',textAlign:'center'}}>
                 <Button onClick={() => getStoreData(selectedstoreaddress)} style={{color:'white'}}>
@@ -819,11 +821,9 @@ type="file" id="files" / >
             onClose={handleClose}>
             <DialogTitle style={{padding:'20px',textAlign:'center'}}>What's Going On Here??</DialogTitle>
                 <div style={{fontSize:'1.25em'}}>We're glad you asked...there's a few cool things happening here! 
-                <br/><br/>These demo "storefronts" are stateless, meaning they have no memory, and are completely neutral when you arrive. The storefront data and images are hosted entirely on IPFS, associated with a user's Guer NFT.
+                <br/><br/>These demo "storefronts" are stateless, meaning they have no memory, and are completely neutral when you arrive. The storefront data and images are hosted entirely on SKALE and IPFS, associated with a user's NFT.
                 <br/><br/> When you "Connect" to the site, you temporarily provide it access to information you control, not the other way around. 
                 <br/><br/>These examples are also decentralized, meaning they're hosted across the network rather than a central server, and all the information (images, text, prices, contact info) is stored on decentralized databases and storage networks!
-                <br/><br/><strong>This demo is run on the SKALE testnet, or information on how to connect your Metamask to SKALE, please see this link: <a style={{textDecoration:'underline'}} href="https://guer.co/users#skaleconnect" target="_blank" rel="noreferrer">guer.co/users</a> and click, "I'm in, Show me!"</strong>
-                <br/><br/>If you'd like to learn more, check out our <a href="https://guer.substack.com/" rel="noreferrer" target="_blank">https://guer.substack.com/</a>, shoot us an e-mail <a href="mailto:info@guer.co">mailto:info@guer.co</a>, or visit our website: <a style={{color:'white',textDecoration:'underline'}} href="https://guer.co" target="_blank" rel="noreferrer">guer.co</a>
                 <br/><br/><span style={{color:'red'}}>THIS IS A DEMONSTRATION ON A TESTNET. Please do not send real Ethereum, or provide any sensitive or private information, as they will most certainly be lost! </span>
                 </div>
             <DialogActions>
