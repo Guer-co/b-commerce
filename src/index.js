@@ -118,7 +118,8 @@ const web3Check = async () => {
             await web3Modal.connect();
             //const provider = await web3Modal.connect();
             //await window.ethereum.enable()
-            setWeb3test(1)
+            setWeb3test(1);
+            setOpenconnectmodal(true);
         } catch (error) {
             alert("You need to allow access to your metamask to use the app.");
         }
@@ -463,7 +464,7 @@ return(
                 </div>
                 <br/>
                 <div>
-                <Button style={{backgroundColor:'#1D3557',border:'1px solid white', borderRadius:'8px',padding:'5px 20px',width:'150px',color:'white'}} onClick={() => {web3Check();setOpenconnectmodal(true)}}>{nftinfo ? "CONNECTED" : "CONNECT"}</Button>
+                <Button style={{backgroundColor:'#1D3557',border:'1px solid white', borderRadius:'8px',padding:'5px 20px',width:'150px',color:'white'}} onClick={() => {web3Check();}}>{nftinfo ? "CONNECTED" : "CONNECT"}</Button>
                 </div>
                 <br/>
                 <div>
