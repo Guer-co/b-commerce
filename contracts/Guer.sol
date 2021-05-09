@@ -36,7 +36,7 @@ contract Guer {
         NftsByUser[msg.sender].push(address(a));
     }
 
-    function getUseraNFTs() public view returns (address[] memory){
+    function getUserNFTs() public view returns (address[] memory){
         return NftsByUser[msg.sender];
     }
 

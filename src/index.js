@@ -16,8 +16,8 @@ import Web3Modal from "web3modal";
 import Torus from "@toruslabs/torus-embed";
 require('dotenv').config()
 
-const Filestorage = require('@skalenetwork/filestorage.js/src/index');
-const skaleNetwork = `${process.env.SKALENETWORK}`;
+const Filestorage = require('@skalenetwork/filestorage.js');
+const skaleNetwork = `https://eth-global-12.skalenodes.com:10584`;
 const IPFS = require('ipfs-http-client');
 
 
@@ -217,84 +217,7 @@ const uploadJson = async (e) => {
     "product3price": "8",
     "theme":"light"
     }
-    //const data = {
-    //"company": "PLACEHOLDERCOMPANY",
-    //"companydescription": "My Name is Guer. Welcome to my store!<br/>Here is my featured hero item thing!",
-    //"companyemail": "steven@guer.co",
-    //"companyphone": "555-555-5555",
-    //"companyaddress": "5 Lido Beach Way Isla Paradiso<br/> Panama City<br/> Panama",
-    //"logo": "QmaRsanZLwjDdFpGJS7QThWhL3gbZCajfvCiG2MNnn4rWX",
-    //"hero": "QmSeELEzneQ4KbGHD2KdaiLy2hYxYg8Qp2ZrZjthcK5PvW",
-    //"small-logo": "QmaRsanZLwjDdFpGJS7QThWhL3gbZCajfvCiG2MNnn4rWX",
-    //"favicon": "QmaRsanZLwjDdFpGJS7QThWhL3gbZCajfvCiG2MNnn4rWX",
-    //"aboutimage": "QmaRsanZLwjDdFpGJS7QThWhL3gbZCajfvCiG2MNnn4rWX",
-    //"contactimage": "QmaRsanZLwjDdFpGJS7QThWhL3gbZCajfvCiG2MNnn4rWX",
-    //"product1pic": "QmaUC6u7c7umbTkns4uGopZKt1NTMwWNTQ26QPmrCFGCpp",
-    //"product1title": "Product1title",
-    //"product1description": "Product1description",
-    //"product1price": "1",
-    //"product2pic": "QmRscvPHpQp4HU1e4TRQoHE3hMDCnDaoVKKkYG8JaZsE6Q",
-    //"product2title": "Product2title",
-    //"product2description": "Product2title",
-    //"product2price": "2",
-    //"product3pic": "QmTtQfmjq4nGzAksMQpvGKVAyNUHuFC6o4y5eJKEHdasia",
-    //"product3title": "Product3title",
-    //"product3description": "Product3title",
-    //"product3price": "3",
-    //"theme":"dark"
-    //}
-    //const data = {"company": "NAUTI DOGE",
-    //"companynamedescription": "NAUTI DOGE BEACH BAR + BREWING",
-    //"companydescription": "Hi I'm Pearl. I'm a doge! Since I love eating, drinking, and digging holes at the beach, I figured I'd share my love with the world, and started Nauti Doge Beach Bar + Brewing Co. When I'm not sunbathing, I hang out on boats, chase squirrels, and nap. I'm also all about the cryptos. Made it big when I bought ETH back in 2015 so, here we are. Thanks for stopping by.",
-    //"companyemail": "james@guer.co",
-    //"companyphone": "555-555-5555",
-    //"companyaddress": "5 Lido Beach Way Isla Paradiso<br/> Panama City<br/> Panama",
-    //"logo": "QmdjumfN2AjamsUyJGXrtYnUvVSi7AKLgcZgvmdz24Gso1",
-    //"hero": "QmXgQqcXmkATEyzDfYSyj2cjHhBg7tYky1DKVnTQTqm2fR",
-    //"smalllogo": "QmdjumfN2AjamsUyJGXrtYnUvVSi7AKLgcZgvmdz24Gso1",
-    //"favicon": "QmZX5G8oFmDYayMdD92kkR4PhYJRkNX5hTKG8ZatAX685B",
-    //"aboutimage": "QmXgQqcXmkATEyzDfYSyj2cjHhBg7tYky1DKVnTQTqm2fR",
-    //"contactimage": "QmUGwVNfmYpQgM6jPzztBufatC8d68QZJ6tmM3jD1XWShZ",
-    //"product1pic": "QmeuLf1Wz4Yeub9jFARafNNHiKTNMCWeZda9C8RBctKPt9",
-    //"product1title": "MARGARITA MUTT",
-    //"product1description": "Spicy Pupper-Dust Rimmed Margarita, built on Anejo Tequila, Touched with Orgeat and Triple Sec, with a splash of Agave. Shake over ice with an egg white for the real Nauti experience!",
-    //"product1price": "10",
-    //"product2pic": "QmZaqQAjKV7D58XajNejsRLiQ7HX8DDQqnaJuqr1Dnse23",
-    //"product2title": "CANINE CHEESESTEAK",
-    //"product2description": "Every pup's favorite … 8 oz of Rib Eye, White American, Cheeze Whiz, Carmelized Golden Onions, served on a legendary, fresh-baked Amoroso rollp",
-    //"product2price": "12",
-    //"product3pic": "QmcYk13iA1FXh45VaakyGnUz8m8yEbJY6ZxsYejDRrwkg7",
-    //"product3title": "BARKING BRUT BREW IPA",
-    //"product3description": "Hoppy, Smooth, and Bone-dry, this is the relief you've been looking for from hazy, fruity, kid's juice IPAs of late",
-    //"product3price": "8",
-    //"theme":"light"
-    //}
-    //const data3 = {
-    //company	"CUP Store"
-    //companydescription	"My Name is Guer. Welcome to my store!<br/>Here is my featured hero item thing!"
-    //companyemail	"steven@guer.co"
-    //companyphone	"555-555-5555"
-    //companyaddress	"5 Lido Beach Way Isla Paradiso<br/> Panama City<br/> Panama"
-    //logo	"QmdUQ7qpt9Fjn4RPA59sNXUFSDKYm7VSYNe5tTUw5YS46m"
-    //hero	"QmZx5hMZdeW5skPCtBHVYAdZyvuio7BvXVmuF1JPL32PFr"
-    //small-logo	"QmdUQ7qpt9Fjn4RPA59sNXUFSDKYm7VSYNe5tTUw5YS46m"
-    //favicon	"QmZX5G8oFmDYayMdD92kkR4PhYJRkNX5hTKG8ZatAX685B"
-    //aboutimage	"QmXgQqcXmkATEyzDfYSyj2cjHhBg7tYky1DKVnTQTqm2fR"
-    //contactimage	"QmUGwVNfmYpQgM6jPzztBufatC8d68QZJ6tmM3jD1XWShZ"
-    //product1pic	"QmaUC6u7c7umbTkns4uGopZKt1NTMwWNTQ26QPmrCFGCpp"
-    //product1title	"Normal cup"
-    //product1description	"Like your basic cup"
-    //product1price	"1"
-    //product2pic	"QmRscvPHpQp4HU1e4TRQoHE3hMDCnDaoVKKkYG8JaZsE6Q"
-    //product2title	"Special Cup"
-    //product2description	"A little bit better cup"
-    //product2price	"2"
-    //product3pic	"QmTtQfmjq4nGzAksMQpvGKVAyNUHuFC6o4y5eJKEHdasia"
-    //product3title	"Specialist Cup"
-    //product3description	"The bestest cup"
-    //product3price	"3"
-    //theme	"dark"
-    //}
+
     const readydata = JSON.stringify(data);
     const ipfs = new IPFS({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
     const upload = await ipfs.add(readydata);
@@ -302,62 +225,52 @@ const uploadJson = async (e) => {
 
 if (web3 === ''){
     setWeb3(new Web3(Web3.givenProvider));
-    let filestorage = new Filestorage(new Web3(Web3.givenProvider));
 }
 
 async function upload(event, specificDirectory=''){
+
+
     event.preventDefault();
-    //create web3 connection
     const web3Provider = new Web3.providers.HttpProvider(
         skaleNetwork
     );
     let web3 = new Web3(web3Provider);
-    //get filestorage instance
     let filestorage = new Filestorage(web3, true);
-    //provide your account & private key
-    //note this must include the 0x prefix
-    let privateKey = `${process.env.PRIVATEKEY}`;
-    let account = `${process.env.PUBLICKEY}`;
-    //get file data from file upload input field
-    let file = document.getElementById('data_file').files[0];
+    let privateKey = ``;
+    let account = `0xEA8474Fa18fF454ed6a69A86c76322edC982de02`;
+    let file = document.getElementById('files').files[0];
     let reader = new FileReader();
-    //file path in account tree (dirA/file.name)
-    let filePath;
-    if (specificDirectory === '') {
-      filePath = file.name;
-    } else {
-      filePath = specificDirectory + '/' + file.name;
-    }
-    //file storage method to upload file
-    console.log(file);
+    let bytes;
+
+    //await filestorage.reserveSpace('0xEA8474Fa18fF454ed6a69A86c76322edC982de02', 1000000)
+
+
     reader.onload = async function(e) {
       const arrayBuffer = reader.result
-      const bytes = new Uint8Array(arrayBuffer);
-      let link = filestorage.uploadFile(
-        account, 
-        filePath, 
-        bytes,
-        privateKey
-      );
+      bytes = new Uint8Array(arrayBuffer);
+      console.log(account);
+      console.log(file.name);
+      console.log(bytes);
+      console.log(privateKey);
+      await filestorage.uploadFile(account, file.name, bytes, '').catch(err => console.log(err.message) );
+
     };
     reader.readAsArrayBuffer(file);
+
   }
 
 
 async function getFiles(storagePath){
-    ////create web3 connection
-    //const web3Provider = new Web3.providers.HttpProvider(
-    //    skaleNetwork
-    //);
-    //let web3 = new Web3(web3Provider);
-    ////get filestorage instance
-    //let filestorage = new Filestorage(web3, true);
-    ////provide your account & private key
-    //let account = `${process.env.PERSONALKEY}`;
-    //let files = await filestorage.listDirectory(storagePath);
-    //console.log(files);
+    //create web3 connection
+    const web3Provider = new Web3.providers.HttpProvider(skaleNetwork);
+    let web3 = new Web3(web3Provider);
+    let filestorage = new Filestorage(web3, true);
+    let account = `0xEA8474Fa18fF454ed6a69A86c76322edC982de02`;
+    let files = await filestorage.listDirectory(storagePath).catch(err => console.log(err.message) );
+    console.log('files');
+    console.log(files);
   }
-  const storagePath = `${process.env.STORAGEPATH}`;
+  const storagePath = `EA8474Fa18fF454ed6a69A86c76322edC982de02`;
   getFiles(storagePath);
 
 
@@ -385,18 +298,13 @@ async function getFiles(storagePath){
   }
 
   async function createDirectory(directoryPath) {
-    //create web3 connection
-    const web3Provider = new Web3.providers.HttpProvider(
-        skaleNetwork
-    );
+    const web3Provider = new Web3.providers.HttpProvider(skaleNetwork);
     let web3 = new Web3(web3Provider);
-    //get filestorage instance
     let filestorage = new Filestorage(web3, true);
-    //provide your account & private key
-    //note this must include the 0x prefix
     let privateKey = `${process.env.PRIVATEKEY}`;
     let account = `${process.env.PUBLICKEY}`;
-    await filestorage.createDirectory(account, directoryPath, privateKey);
+    console.log('createdirectory');
+    await filestorage.createDirectory(account, directoryPath, privateKey).catch(err => console.log(err.message) );
 }
 
 const uploadFile = async () => {
@@ -694,6 +602,9 @@ return(
                       <Button color="primary">Primary</Button>
                       <Button color="secondary">Secondary</Button>
                 </div>
+                <input onChange={(e) => upload(e)} 
+type="file" id="files" / >
+
             </Grid>
         </div>        
 
